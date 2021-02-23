@@ -18,10 +18,8 @@ body {
 }
 
 .hero-container > .hero-section > .hero-text {
-    /* max-width: 50%; */
     max-width: 600px;
     display: flex;
-    /* padding-left: 50px; */
     margin-right: 30px;
     flex-direction: column;
     justify-content: center;
@@ -44,21 +42,22 @@ body {
 
 .hero-container > .hero-section > .hero-image {
     min-width: 50%;
-    display: inline-block;
+    height: 600px;
     overflow: hidden;
+    border-top-left-radius: 50px 350px;
+    border-bottom-left-radius: 50px 350px;
 }
 
 .hero-container > .hero-section > .hero-image > img {
-    border-top-left-radius: 50px 350px;
-    border-bottom-left-radius: 50px 350px;
-    height: 600px;
+    height: 100%;
+    max-width: 100%;
     vertical-align: middle;
+    object-fit: cover;
 }
 
 /* breakpoints */
 @media only screen and (max-width: 1024px) {
     .hero-container > .hero-section {
-        /* flex-direction: column-reverse; */
         flex-direction: column;
     }
 
@@ -75,12 +74,12 @@ body {
 
     .hero-container > .hero-section > .hero-image {
         order: -1;
-    }
-
-    .hero-container > .hero-section > .hero-image > img {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         height: 500px;
+    }
+
+    .hero-container > .hero-section > .hero-image > img {
         width: 100%;
         object-fit: cover;
         vertical-align: middle;
